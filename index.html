@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="left-block">
+            <form name="core">
+                <label for="login">Login</label>
+                <input type="text" name="login" id="login" placeholder="Enter login" pattern="^[A-Za-z]{4,16}$" required>
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" placeholder="Enter password" pattern="^[A-Za-z0-9_\-.]{4,16}$" required>
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" pattern="^[A-Za-z0-9.-]*@\w*[.]\w{2,}$" required>
+                <input type="submit" name="submit" value="Add user" onclick="addUser()">
+                <input type="submit" name="editButton" value="Edit user" onclick="saveEditUser()" style="display: none;">
+            </form>
+        </div>
+        <div class="right-block">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Login</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>ivan</td>
+                        <td>1234</td>
+                        <td>ii@gmail.com</td>
+                        <td><input type="button" value="Edit"></td>
+                        <td><input type="button" value="Delete"></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="main.js "></script>
+</body>
+
+</html>
